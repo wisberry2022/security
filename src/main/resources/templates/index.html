@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
+  <nav>
+      <ul>
+          <li><a th:href="@{/}" th:text="main" href="index.html">MAIN</a></li>
+          <li><a th:href="@{/home}" th:text="home" href="home.html">HOME</a></li>
+          <li><a th:href="@{/list}" th:text="list" href="dept/list.html">list</a></li>
+          <li th:if="${session.sessionId != null}"><a th:href="@{/logout}" th:text="logout" href="index.html">LogOut</a></li>
+          <li th:if="${session.sessionId == null}"><a th:href="@{/login}" th:text="login" href="login.html">LogIn</a></li>
+      </ul>
+      <p th:text="${session.userId}">test</p>
+  </nav>
   <h1>Index Page</h1>
+
 </body>
 </html>

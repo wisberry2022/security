@@ -27,19 +27,7 @@ public class LoginController {
 
     @GetMapping("/login")
     public String login() {
-        System.out.println("get login page");
+
         return "login";
     }
-//    @PostMapping("/login")
-//    public void loginProcess(HttpServletRequest req, HttpServletResponse resp) {
-//        String id = req.getParameter("id");
-//        String pwd = req.getParameter("pwd");
-//
-//        System.out.println("login post");
-//        service.loadUserByUsername(id);
-//
-//
-//
-//
-//    }
 }
